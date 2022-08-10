@@ -1,0 +1,15 @@
+{
+  "project_name": "package",
+  "org": "benkrikler",
+  "full_name": "Benjamin Edward Krikler",
+  "email": "4083697+benkrikler@users.noreply.github.com",
+  "url": "https://github.com/{{ cookiecutter.org }}/{{ cookiecutter.project_name }}",
+  "year": "{% now 'utc', '%Y' %}",
+  "project_slug": "{% {{ cookiecutter.project_slug }} | slugify %}",
+  "project_package": "{% {{ cookiecutter.project_slug }} | slugify(separator='_') %}",
+  "_extensions": [
+	  "jinja2_time.TimeExtension",
+	  "cookiecutter.extensions.SlugifyExtension"
+  ],
+  "_copy_without_render": [".github/workflows/*.yml"]
+}
