@@ -3,14 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "fibonacci"
+name = "{{ cookiecutter.project_name }}"
 description = ''
 readme = "README.md"
 requires-python = ">=3.7"
 license = "MIT"
 keywords = []
 authors = [
-  { name = "Benjamin Edward Krikler", email = "4083697+benkrikler@users.noreply.github.com" },
+  { name = "{{ cookiecutter.full_name}}", email = "{{ cookiecutter.email }}"},
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
@@ -37,12 +37,12 @@ dev = [
 ]
 
 [project.urls]
-Documentation = "https://github.com/unknown/fibonacci#readme"
-Issues = "https://github.com/unknown/fibonacci/issues"
-Source = "https://github.com/unknown/fibonacci"
+Documentation = "{{ cookiecutter.url }}#readme"
+Issues = "{{ cookiecutter.url }}/issues"
+Source = "{{ cookiecutter.url }}"
 
 [tool.hatch.version]
-path = "fibonacci/__about__.py"
+path = "{{ cookiecutter.project_package }}/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -51,14 +51,14 @@ dependencies = [
 ]
 
 [tool.hatch.envs.default.scripts]
-tests = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov=fibonacci --cov=tests"
+tests = "pytest --cov-report=term-missing --cov-config=pyproject.toml --cov={{ cookiecutter.project_package }} --cov=tests"
 no-cov = "tests --no-cov"
 
 [tool.coverage.run]
 branch = true
 parallel = true
 omit = [
-  "fibonacci/__about__.py",
+  "{{ cookiecutter.project_package }}/__about__.py",
 ]
 
 [tool.coverage.report]
@@ -69,7 +69,7 @@ exclude_lines = [
 ]
 
 [tool.mypy]
-files = "fibonacci"
+files = "{{ cookiecutter.project_package }}"
 python_version = "3.7"
 warn_unused_configs = true
 strict = true

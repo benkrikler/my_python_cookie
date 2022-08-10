@@ -57,7 +57,7 @@ repos:
     rev: v0.971
     hooks:
       - id: mypy
-        files: fibonacci
+        files: {{ cookiecutter.project_package }}
         args: []
 
   - repo: https://github.com/codespell-project/codespell

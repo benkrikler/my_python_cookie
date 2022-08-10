@@ -1,8 +1,8 @@
-# fibonacci
+# {{ cookiecutter.project_name }}
 
-[![PyPI - Version](https://img.shields.io/pypi/v/fibonacci.svg)](https://pypi.org/project/fibonacci)
-[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/fibonacci.svg)](https://pypi.org/project/fibonacci)
-[![CI](https://github.com/benkrikler/test-python-project-setup/actions/workflows/ci.yml/badge.svg)](https://github.com/benkrikler/test-python-project-setup/actions/workflows/ci.yml)
+[![PyPI - Version](https://img.shields.io/pypi/v/{{ cookiecutter.project_slug }}.svg)](https://pypi.org/project/{{ cookiecutter.project_slug }})
+[![PyPI - Python Version](https://img.shields.io/pypi/pyversions/{{ cookiecutter.project_slug }}.svg)](https://pypi.org/project/{{ cookiecutter.project_slug }})
+[![CI]({{ cookiecutter.url }}/actions/workflows/ci.yml/badge.svg)]({{ cookiecutter.url }}/actions/workflows/ci.yml)
 
 -----
 
@@ -21,7 +21,7 @@ See the [design choices](docs/design.md) document for more details.
 ## Installation
 
 ```console
-pip install fibonacci
+pip install {{ cookiecutter.project_slug }}
 ```
 
 ## Developing
@@ -53,4 +53,4 @@ python -m pytest
 
 ## License
 
-`fibonacci` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+`{{ cookiecutter.project_slug }}` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
