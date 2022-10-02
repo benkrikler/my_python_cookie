@@ -7,6 +7,8 @@
   "email": "4083697+benkrikler@users.noreply.github.com",
   "url": "https://github.com/{{ cookiecutter.org }}/{{ cookiecutter.project_slug }}",
   "year": "{% now 'utc', '%Y' %}",
+  "git_init": ["y", "n"],
+  "pre_commit_install": ["y", "n"],
   "_extensions": [
 	  "jinja2_time.TimeExtension",
 	  "cookiecutter.extensions.SlugifyExtension"
