@@ -54,3 +54,5 @@ python -m pytest
 ## License
 
 `{{ cookiecutter.project_slug }}` is distributed under the terms of the [MIT](https://spdx.org/licenses/MIT.html) license.
+
+*Package structure based on template from https://github.com/benkrikler/my_python_cookie*
